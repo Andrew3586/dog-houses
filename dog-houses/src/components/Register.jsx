@@ -67,7 +67,7 @@ const Register = () => {
               >
                 Password
               </label>
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start relative">
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password"
@@ -75,29 +75,32 @@ const Register = () => {
                   required
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                {showPassword ? (
-                  <AiOutlineEye
-                    onClick={() => {
-                      setShowPassword(!showPassword);
-                    }}
-                  />
-                ) : (
-                  <AiOutlineEyeInvisible
-                    onClick={() => {
-                      setShowPassword(!showPassword);
-                    }}
-                  />
-                )}
+                <div className="absolute top-5 right-5 ">
+                  {showPassword ? (
+                    <AiOutlineEye
+                      onClick={() => {
+                        setShowPassword(!showPassword);
+                      }}
+                    />
+                  ) : (
+                    <AiOutlineEyeInvisible
+                      onClick={() => {
+                        setShowPassword(!showPassword);
+                      }}
+                    />
+                  )}
+                </div>
               </div>
             </div>
-            <div className="mt-4">
+            <div className="mt-4" >
               <label
                 htmlFor="password_confirmation"
                 className="block text-sm font-medium text-gray-700 undefined"
               >
                 Confirm Password
+
               </label>
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start relative">
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password_confirmation"
@@ -105,19 +108,21 @@ const Register = () => {
                   required
                   onChange={(e) => setCPassword(e.target.value)}
                 />
-                {showPassword ? (
-                  <AiOutlineEye
-                    onClick={() => {
-                      setShowPassword(!showPassword);
-                    }}
-                  />
-                ) : (
-                  <AiOutlineEyeInvisible
-                    onClick={() => {
-                      setShowPassword(!showPassword);
-                    }}
-                  />
-                )}
+                <div className="absolute top-5 right-5">
+                  {showPassword ? (
+                    <AiOutlineEye
+                      onClick={() => {
+                        setShowPassword(!showPassword);
+                      }}
+                    />
+                  ) : (
+                    <AiOutlineEyeInvisible
+                      onClick={() => {
+                        setShowPassword(!showPassword);
+                      }}
+                    />
+                  )}
+                </div>
               </div>
             </div>
             <div className="flex items-center mt-4">

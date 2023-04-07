@@ -3,6 +3,7 @@ import Login from "./components/Login";
 import Home from "./components/Home";
 import Register from "./components/Register";
 import Layout from "./components/layout/Layout";
+import AddNewListing from "./components/AddNewListing";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         {/* Private Routes */}
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-        </Route>
+          <Route path="/adddoghouse" element={<AddNewListing />} />
+          </Route>
       </Routes>
     </BrowserRouter>
   );
