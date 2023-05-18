@@ -3,16 +3,15 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
+    <div className="flex justify-evenly mt-8 font-bold">
       <div>
-        <h1>Name</h1>
-        {/* logo */}
+        <Link to="/">Logo</Link>
       </div>
       <div>
-        <Link to="/adddoghouse">Add new dog house listing</Link>
+        <Link to="/adddoghouse">Add A New Dog House Listing</Link>
       </div>
       <div>
-        <button>Logout</button>
+        <button>Log out</button>
       </div>
     </div>
   );

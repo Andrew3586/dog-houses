@@ -3,8 +3,6 @@ import React, { useState } from "react";
 const AddNewListing = () => {
     const [name, setName] = useState("");
     const [address, setAddress] = useState("");
-    const [free, setFree] = useState();
-    const [paid, setPaid] = useState();
     const [price, setPrice] = useState();
     const [material, setMaterial] = useState("");
     const [capacity, setCapacity] = useState("");
@@ -19,7 +17,7 @@ const AddNewListing = () => {
 
     return (
         <div className="bg-green-200/[.40]  flex flex-col h-screen items-center">
-            <h1 className="text-2xl font-bold m-4 py-10">Add New Listing</h1>
+            <h1 className="text-2xl font-bold m-4 py-10">Add A New Listing</h1>
             <form onSubmit={formSubmitHandler}>
                 <input
                     type="text"
@@ -41,7 +39,7 @@ const AddNewListing = () => {
                     rows={4}
                     cols={40}
                 />
-                <input
+                {/* <input
                     className="bg-gray-50 border border-gray-300 text-gray-900 items-center text-sm rounded-lg block w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white mt-6"
                     type="radio"
                     name="free"
@@ -56,7 +54,7 @@ const AddNewListing = () => {
                     value="Paid"
                     onChange={e => setPaid(e.target.value)}
                     required
-                />Paid
+                />Paid */}
                 <input
                     className="bg-gray-50 border border-gray-300 text-gray-900 items-center text-sm rounded-lg block w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white mt-6"
                     type="text"
@@ -90,14 +88,11 @@ const AddNewListing = () => {
                     required
                     placeholder="Capacity"
                 />
-                <label>
-                    Select Indoor or Outdoor:
-                    <select name="selectIndoorOutdoor" className="mt-6">
-                        <option value="select">Select</option>
-                        <option value="indoor">Indoor</option>
-                        <option value="outdoor">Outdoor</option>
-                    </select>
-                </label>
+                {/* <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 mt-6">
+                    <option selected>Select Indoor Or Outdoor</option>
+                    <option value="indoor">Indoor</option>
+                    <option value="outdoor">Outdoor</option>
+                </select> */}
 
                 <input
                     className="bg-[#243e8e] hover:bg-[#323754] border-gray-300 text-white items-center text-sm rounded-lg block w-60 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white font-bold mt-12 ml-10"
